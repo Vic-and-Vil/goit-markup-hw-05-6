@@ -70,11 +70,37 @@ button{
 }
 .header-container{
     display: flex;
+        width: 320px;
     align-items: center;
+}
+@media screen and (min-width:768px){
+    .header-container{
+        min-width: 768px;
+        max-width: 1157px;
+    }
+}
+@media screen and (min-width:1158px) {
+.header-container{
+    min-width:  1158px;
+}    
 }
 .header-navigation{
     display: flex;
     align-items: center;
+}
+@media screen and (min-width:768px) {
+    .header-navigation {
+            display: flex;
+            align-items: center;
+            unicode-bidi: isolate;
+        }
+}
+@media screen and (min-width:1158px) {
+.header-navigation {
+        display: flex;
+        align-items: center;
+        unicode-bidi: isolate;
+    }
 }
 .logo-dark{
     font-family: "Raleway", sans-serif;
@@ -91,6 +117,20 @@ button{
     display: none;
     gap: 40px;
     list-style: none;
+}
+@media screen and (min-width:768px) {
+    .ul-list-header {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+    }
+}
+@media screen and (min-width:1158px) {
+    .ul-list-header {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+    }
 }
 .header-menu{
     font-family: "Roboto", sans-serif;
@@ -132,6 +172,21 @@ border-radius: 2px;
     display: none;
     gap: 40px;
 }
+@media screen and (min-width:768px) {
+    .contact-ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    }
+}
+
+@media screen and (min-width:1158px) {
+    .contact-ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    }
+}
 .address-menu {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -148,6 +203,20 @@ border-radius: 2px;
 }
 .address-menu:hover, 
 .address-menu:focus{color:#404bbf}
+@media screen and (min-width:768px) {
+    .address-menu:hover,
+        .address-menu:focus {
+            color: #404bbf
+        }
+}
+
+@media screen and (min-width:1158px) {
+    .address-menu:hover,
+        .address-menu:focus {
+            color: #404bbf
+        }
+}
+
 /*----modal----*/
  @media screen and (min-width: 768px) {
      .mobile-menu {
