@@ -1595,7 +1595,8 @@ flex-shrink: 0;
         background-color: #4d5ae5;
         border-radius: 4px;
         height: 56px;
-margin: 0,auto;
+margin: 0, auto;
+display: block;
         border: none;
         padding: 16px 32px;
         align-items: center;
@@ -1607,7 +1608,54 @@ margin: 0,auto;
     color: #4D5AE5;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .form-field-checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрує і текст, і чекбокс */
+}
+
+.form-checkbox-text {
+  display: flex;
+  align-items: center;
+}
+
+.button-modal {
+  display: block;
+  margin: 0 auto;
+}
+.Policy{
+display: flex;
+flex-direction: row;
+}
+.form-field-checkbox {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.form-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.modal-check {
+    margin-top: 3px;
+}
+
+.checkbox-text {
+    display: block;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/*.form-field-checkbox input {
+    margin-right: 8px;
+    margin-top: 2px;
+    /* щоб було вирівняно по вертикалі */
+
 @media screen and (min-width:768px) {
 .modal {
         width: 408px;
