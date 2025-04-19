@@ -478,9 +478,7 @@ border-radius: 2px;
             } 
         }
     }
-/*button:hover{
-    background-color: #404BBF;
-}*/
+
 .name{
     font-size: 36px;
     line-height: 1.11;
@@ -538,43 +536,11 @@ border-radius: 2px;
  .button-sec-one:focus {
      background-color: #404BBF;
 }
+
 /*-----sekcja atutów-----*/
-.name-position-or-person {
-    color: #2E2F42;
-    margin-bottom: 8px;
-}
-p.name-position-or-person{
-    color: #434455;
-}
-.benefits>ul>li>p{
-    color: #434455;
-}
+
 .benefits{
-    background-color: #FFFFFF;
-}
-.benefits > ul > li > p {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-}
-.benefits>h2 {
-    overflow: hidden;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-    font-size: 20px;
-}
-.name-benefit {
-font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    margin-bottom: 8px;
+    background-color: #ffffff;
 }
 .visually-hidden {
     position: absolute;
@@ -590,18 +556,19 @@ font-family: "Roboto", sans-serif;
 }
 .benefit{
     display: flex;
-    gap: 24px;
-}
-.benefit-item{
-    flex-basis: calc((100% - (72px)) / 4);
+    flex-wrap: wrap;
+    gap: 72px;
 }
 .container-benefit{
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin-top: 0;
 }
 .benefits-img-div{
-    border: 1px solid #8e8f99;
+    display: none;
+/*    border: 1px solid #8e8f99;
     border-radius: 4px;
     width: 264px;
     height: 112px;
@@ -609,13 +576,85 @@ font-family: "Roboto", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 8px;*/
 }
 .benefits-img{
     align-items: center;
     left: 100px;
     top: 24px;
 }
+.text-description {
+    font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+}
+
+.name-benefit {
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
+}
+@media screen and (min-width:768px) {
+    .benefit{
+        gap: 72px 24px;
+        width: 736px;
+    }
+    .benefit-item{
+        flex-basis: calc((100% - (24px)) / 2);
+    }
+    .name-benefit{
+        text-align: left;
+    }
+
+}
+
+@media screen and (min-width:1158px) {
+    .benefits-img-div {
+        border: 1px solid #8e8f99;
+        border-radius: 4px;
+        width: 264px;
+        height: 112px;
+        background-color: #f4f4fd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8px;
+        }
+        .benefit{
+            gap: 24px;
+            width: 1128px;
+        }
+        .benefit-item{
+            flex-basis: calc((100% - (3*24px)) / 4);
+        }
+        .name-benefit{
+            text-align: left;
+            font-weight: 500;                font-size: 20px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            color: #2e2f42;
+        }
+        .text-description{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;                color: #434455;
+        }
+}
+
+
+
+
+
+
 /*-----sekcja z personelem-----*/
 .team-part {
     display: flex;
