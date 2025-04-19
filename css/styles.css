@@ -222,11 +222,17 @@ border-radius: 2px;
      .mobile-menu {
          display: none;
      }
+     .menu-menu-open-btn{
+        display: none;
+     }
  }
 
  @media screen and (min-width: 1158px) {
      .mobile-menu {
          display: none;
+     }
+     .menu-menu-open-btn{
+        display: none;
      }
  }
 
