@@ -798,10 +798,14 @@ border-radius: 2px;
 }
 
 /*-----sekcja z naszymi produktami-----*/
-.Portfolio > ul > li > p{
+
+/*---------------*/
+.portfolio-window {
     color: #434455;
+    display: none;
 }
-.text-description-team{
+
+.text-description {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -809,63 +813,53 @@ border-radius: 2px;
     letter-spacing: 0.02em;
     color: #434455;
 }
-.text-description{
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-}
-.options{
+
+.options {
     font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: #2e2f42;
-        font-family: "Roboto", sans-serif;
-        margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 8px;
 }
-.our-portfolio{
+
+.our-portfolio {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-        font-size: 36px;
-        line-height: 1.11;
-        letter-spacing: 0.02em;
-        text-align: center;
-        text-transform: capitalize;
-        color: #2e2f42;
-        margin-bottom: 72px;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color: #2e2f42;
+    margin-bottom: 72px;
 }
+
 .Portfolio {
     flex-wrap: wrap-reverse;
     background-color: #FFFFFF;
 }
+
 .container-produkty {
-    max-width: 1158px;
+    max-width: 320px;
 }
+
 .produkty {
     display: flex;
     flex-wrap: wrap;
-    gap: 48px 24px;
-    column-gap: 24px;
-    row-gap: 48px;
+    gap: 48px;
 }
+
 .box {
-    width: calc((100% - 48px) / 3);
+    width: 100%;
     border-top: none;
     position: relative;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.box:hover .portfolio-window{
-transform: translateY(0);
-}
-.box:hover{
-        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-                0px 1px 1px rgba(46, 47, 66, 0.16),
-                0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-.portfolio-window{
+
+.portfolio-window {
+    display: none;
     position: absolute;
     top: 0;
     background-color: #4D5AE5;
@@ -883,20 +877,252 @@ transform: translateY(0);
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.obrazek{
+
+.obrazek {
     margin: 0;
     box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .obrazek-text {
     position: relative;
     overflow: hidden;
+
 }
+
 .nazwy-appek {
     padding: 32px 16px;
-    border: 1px solid #E7E9FC;
-    border-top: none;/*
-    margin-bottom: 8px;*/
+    border-top: none;
+    border-bottom: 1px solid #e7e9fc;
+    border-left: 1px solid #e7e9fc;
+    border-right: 1px solid #e7e9fc;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background: #fff;
 }
+
+@media screen and (min-width: 768px) {
+    .text-description {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+    }
+
+    .options {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 8px;
+    }
+
+    .our-portfolio {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-align: center;
+        text-transform: capitalize;
+        color: #2e2f42;
+        margin-bottom: 72px;
+    }
+
+    .Portfolio {
+        flex-wrap: wrap-reverse;
+        background-color: #FFFFFF;
+    }
+
+    .container-produkty {
+        max-width: 768px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .produkty {
+        column-gap: 24px;
+        row-gap: 72px;
+    }
+
+    .box {
+        width: calc((100% - 1 * 24px) / 2);
+        border-top: none;
+        position: relative;
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .box:hover .portfolio-window {
+        transform: translateY(0);
+    }
+
+    .box:hover {
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 2px 1px rgba(46, 47, 66, 0.08);
+    }
+
+    .portfolio-window {
+        position: absolute;
+        top: 0;
+        background-color: #4D5AE5;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #f4f4fd;
+        border-radius: 0%;
+        padding-left: 32px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-right: 32px;
+        height: 100%;
+        transform: translateY(100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .obrazek {
+        margin: 0;
+        box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .obrazek-text {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .nazwy-appek {
+        padding: 32px 16px;
+        border: 1px solid #E7E9FC;
+        border-top: none;
+        /*
+        margin-bottom: 8px;*/
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .Portfolio>ul>li>p {
+        color: #434455;
+    }
+
+    .text-description-team {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+    }
+
+    .text-description {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+    }
+
+    .options {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 8px;
+    }
+
+    .our-portfolio {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-align: center;
+        text-transform: capitalize;
+        color: #2e2f42;
+        margin-bottom: 72px;
+    }
+
+    .Portfolio {
+        flex-wrap: wrap-reverse;
+        background-color: #FFFFFF;
+    }
+
+    .container-produkty {
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+
+    .produkty {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px 24px;
+        column-gap: 24px;
+        row-gap: 48px;
+    }
+
+    .box {
+        width: calc((100% - 48px) / 3);
+        border-top: none;
+        position: relative;
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .box:hover .portfolio-window {
+        transform: translateY(0);
+    }
+
+    .box:hover {
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 2px 1px rgba(46, 47, 66, 0.08);
+    }
+
+    .portfolio-window {
+        display: block;
+        position: absolute;
+        top: 0;
+        background-color: #4D5AE5;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #f4f4fd;
+        border-radius: 0%;
+        padding-left: 32px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-right: 32px;
+        height: 100%;
+        transform: translateY(100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .obrazek {
+        margin: 0;
+        box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .obrazek-text {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .nazwy-appek {
+        padding: 32px 16px;
+        border: 1px solid #E7E9FC;
+        border-top: none;
+        /*
+    margin-bottom: 8px;*/
+    }
+}
+
+
+
 
 /*-----sekcja końcowa-----*/
 .page-footer{
