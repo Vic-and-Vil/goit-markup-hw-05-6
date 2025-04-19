@@ -196,7 +196,7 @@ border-radius: 2px;
 @media screen and (min-width:1158px) {
     .contact-ul{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 12px;
     }
 }
@@ -221,7 +221,7 @@ border-radius: 2px;
         .address-menu:focus {
             color: #404bbf
         }
-}
+    }
 
 @media screen and (min-width:1158px) {
     .address-menu:hover,
@@ -410,11 +410,17 @@ border-radius: 2px;
      .mobile-menu {
          display: none;
      }
+     .menu-menu-open-btn{
+        display: none;
+     }
  }
 
  @media screen and (min-width: 1158px) {
      .mobile-menu {
          display: none;
+     }
+     .menu-menu-open-btn{
+        display: none;
      }
  }
 
@@ -651,37 +657,44 @@ border-radius: 2px;
 }
 
 
-
-
-
-
 /*-----sekcja z personelem-----*/
 .team-part {
-    display: flex;
     background-color: #F4F4FD;
-    padding-top: 120px;
-    padding-bottom: 120px;
+   padding: 96px 0;
+    margin: 0 auto;
 }
-.container-zespol {
+/*.container-zespol {
     max-width: 1228px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+}*/
 .team-list {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .team-member {
     background-color: #ffffff;
-    flex-basis: calc((100% - 72px) / 4);
     border-radius:4px;
-    text-align: center;
-/*    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-*/    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
                 0px 1px 1px rgba(46, 47, 66, 0.16),
                 0px 2px 1px rgba(46, 47, 66, 0.08)
+}
+@media screen and (min-width:768px) {
+.team-member{
+    flex-basis: calc((100% - 24px) / 2);
+}    
+}
+@media screen and (min-width:1158px) {
+.team-member{
+    flex-basis: calc((100%-72px)/4);
+}
+    .team-list{
+    column-gap: 19px;
+    row-gap: 24px;
+    }
 }
 .name-position-or-person {
     font-family: "Roboto", sans-serif;
@@ -692,8 +705,8 @@ border-radius: 2px;
     color: #2e2f42;
     margin-bottom: 8px;
     margin-top: 8px;
+    text-align: center;
 }
-
 .text-description-team {
     text-align: center;
     font-family: "Roboto", sans-serif;
@@ -706,48 +719,40 @@ border-radius: 2px;
 .team-bottom{
     padding: 32px 0;
 }
+.soc-team-block-list{
+    display: flex;
+        padding: 0 10px;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 24px;
+        width: 232px;
+        height: 40px;
+        margin-top: 8px;
+}
 .about-team {
-    font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.11;
+    line-height: 1.11111;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
-    text-transform: capitalize;
     margin-bottom: 72px;
-}
-.team-list {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.team-part>ul{
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-    column-gap: 19px;
-    row-gap: 24px;
 }
 .soc-team-block-list{
     display: flex;
     justify-content: center;
     gap: 24px;
-    padding: 0;
-    list-style: none;
 }
 .team-card-content-block-soc{
-display: block;
-height: 40px;
+    height: 40px;
     width: 40px;
 }
 .icon{
     fill: #f4f4fd;
 }
 .soc-team-icon{
-    width: 16px;
-    height: 16px;
     fill:#f4f4fd;
 }
 .soc-team-list{
@@ -760,23 +765,17 @@ height: 40px;
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.soc-team-list:hover{
-    background-color: #404bbf;
-}
+.soc-team-list:hover,
 .soc-team-list:focus{
     background-color: #404bbf;
 }
-.team-member{
-        background-color: #ffffff;
-            flex-basis: calc((100% - 72px) / 4);
-            border-radius: 0 0 4px 4px;
-            justify-content: center;
+.name-position-or-person{
+    margin-bottom: 8px;
+    text-align: center;    
 }
 .text-description-team{
-        justify-content: center;
-        display: block;
         text-align: center;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
 }
 /*-----sekcja z naszymi produktami-----*/
 .Portfolio > ul > li > p{
